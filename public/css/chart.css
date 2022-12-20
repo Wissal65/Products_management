@@ -1,0 +1,149 @@
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid #e3e6f0;
+  border-radius: 0.35rem;
+}
+
+.card > hr {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+
+
+.card-body {
+  flex: 1 1 auto;
+  min-height: 1px;
+  padding: 1.25rem;
+}
+
+.card-title {
+  margin-bottom: 0.75rem;
+}
+
+.card-subtitle {
+  margin-top: -0.375rem;
+  margin-bottom: 0;
+}
+
+.card-text:last-child {
+  margin-bottom: 0;
+}
+
+
+.card-header {
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 0;
+  background-color: #f8f9fc;
+  border-bottom: 1px solid #e3e6f0;
+}
+
+.card-header:first-child {
+  border-radius: calc(0.35rem - 1px) calc(0.35rem - 1px) 0 0;
+}
+
+
+.card .card-header[data-toggle="collapse"] {
+  text-decoration: none;
+  position: relative;
+  padding: 0.75rem 3.25rem 0.75rem 1.25rem;
+}
+
+.card .card-header[data-toggle="collapse"]::after {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding-right: 1.725rem;
+  line-height: 51px;
+  font-weight: 900;
+  content: '\f107';
+  font-family: 'Font Awesome 5 Free';
+  color: #d1d3e2;
+}
+
+/*.chart-area {
+  position: relative;
+  height: 10rem;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .chart-area {
+    height: 20rem;
+  }
+}*/
+
+.chart-bar {
+  position: relative;
+  height: 10rem;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .chart-bar {
+    height: 20rem;
+  }
+}
+
+.chart-pie {
+  position: relative;
+  height: 15rem;
+  width: 100%;
+  /*animation: anim 2s linear forwards;*/
+}
+
+@media (min-width: 768px) {
+  .chart-pie {
+    height: calc(20rem - 43px) !important;
+  }
+}
+
+.outer{
+height: 160px;
+width: 160px;
+border-radius: 50%;
+padding:20px;
+box-shadow:6px 6px 10px -1px rgba(0,0,0,.15), -6px -6px 10px -1px rgba(255,255,255,0.7)
+}
+.inner{
+  height: 120px;
+width: 120px;
+display: flex;
+align-items:center;
+justify-content: center;
+border-radius: 50%;
+box-shadow:inset 4px 4px 6px -1px rgba(0,0,0,.2),
+inset -4px -4px 6px -1px rgba(255,255,255,0.7),
+-0.5px -0.5px 0px  rgba(0,0,0,.15), 0.5px 0.5px 0px  rgba(255,255,255,0.7), 0px 12px 10px -10px rgba(0,0,0,0.05);
+
+}
+#number{
+  font-weight: 600px;
+  color: #555;
+}
+circle{
+  fill: none;
+  stroke: url(#GradientColor) ;
+  stroke-width: 20px;
+  stroke-dasharray: 472;
+  stroke-dashoffset: 472;
+  animation: anim 2s linear forwards;
+}
+
+svg{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+@keyframes anim {
+  100%{
+    stroke-dashoffset: 0;
+  }
+}
+
