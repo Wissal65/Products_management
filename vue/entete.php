@@ -8,6 +8,7 @@
           ?></title>
           <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
     <link rel="stylesheet" href="../style/style.css"/>
+    <link rel="stylesheet" href="../public/css/style.css"/>
     <link rel="stylesheet" href="../public/css/chart.css"/>
     <link rel="stylesheet" href="../public/css/style.css"/>
     <!-- Boxicons CDN Link -->
@@ -120,9 +121,10 @@
           echo ucfirst(str_replace(".php","",basename($_SERVER["PHP_SELF"])));
           ?></span>
         </div>
-        <form action="" method="GET">
+        <form >
         <div class="search-box">
-          <input value="<?php if(isset($_GET['search'])){echo $_GET['search'];} ?>" type="text"  name="search" placeholder="Recherche... " style="width:33vw;" />
+          <input  type="text" id="myInput" onkeyup="myFunction()"
+          placeholder="Recherche... " style="width:33vw;" />
           <button type="submit" style="border:0 ;right:45px;  "class="bx bx-search"></button>
         </div>
         </form>
@@ -146,6 +148,28 @@
         </div>
       </nav>
 
-    
+      <script>
+function myFunction() {
+  // Declare variables
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+
+  // Loop through all table rows, and hide those who don't match the search query
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[1];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+</script>
         
     

@@ -74,7 +74,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script> <!-- //to close errorMessage -->
-    <!-- Boxicons CDN Link -->
+    <!-- Boxicons -->
   <link
       href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
       rel="stylesheet"
@@ -98,9 +98,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <p class="text-muted">Complete the form below to add a new client</p>
   </div>
   <div class="container d-flex justify-content-center"><form  method="post" style="width:50vw; min-width:300px;">
-
-
-
 <!-- test it it's empty -->
         <?php
         if ( !empty($errorMessage)) {

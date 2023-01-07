@@ -1,36 +1,15 @@
 <?php
 session_start();
 include 'entete.php';
-
-// if (isset($_SESSION["user_id"])) { 
-//     header("Location: index.php");
-//   }
-
-//echo $_SESSION["user_id"];
-
 ?>
- <!--
-<!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="clientstyle.css" />
-<link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<title>Gestion Client</title>
-</head>
-<body>
- -->  
 
 <div class="home-content">
 <?php include('massage.php'); ?>
   <div class="container" >
-    <!-- <h2>List of Clients</h2> -->
     <a href="addclient.php" class="btn btn-outline-info mb-3" style=" border: 1px solid 	#00bfff  ;" >New Client</a>
 
  <div class="table-responsive">
- <table class="table table-striped table-hover text-center " >
+ <table class="table table-striped table-hover text-center " id="myTable" >
       <thead class="table-dark ">
         <tr>
           <th scope="col">ID</th>
